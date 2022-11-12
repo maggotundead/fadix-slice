@@ -1,0 +1,150 @@
+.header {
+    // position: fixed;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    transition: $duration;
+    .container {
+        padding-top: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        @include tablet {
+            padding-top: 24px;
+        }
+        @include mobile {
+            padding-top: 10px;
+        }
+    }
+    .logo {
+        position: relative;
+        z-index: 2;
+    }
+    .menu {
+        @include tablet {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 100vh;
+            height: 150px;
+            opacity: 0;
+            pointer-events: none;
+            transition: $duration;
+            border-top: 1px solid #B2B1D2;
+            border-radius: 16px 16px 0px 0px;
+            background-color: #fff;
+            padding: 24px 16px;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            @include tablet {
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+            }
+            @include mobile {
+                justify-content: space-between;
+            }
+        }
+        li {
+            &:not(:last-child) {
+                margin-right: 48px;
+                @include tablet {
+                    margin-right: 0;
+                }
+            }
+            &:last-child {
+                @include mobile {
+                    width: 100%;
+                    margin-top: 32px;
+                }
+            }
+        }
+    }
+
+    .btn {
+        margin-left: 32px;
+        @include tablet {
+            margin-left: 0;
+            width: 100%;
+        }
+    }
+
+    .burger-btn {
+        display: none;
+        width: 36px;
+        height: 36px;
+        z-index: 2;
+        position: relative;
+        order: 99;
+        margin-left: auto;
+        border-radius: 3px;
+        background-color: #F5F7FF;
+        flex-shrink: 0;
+        @include tablet {
+            display: block;
+        }
+        span {
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 2px;
+            left: 9px;
+            opacity: 1;
+            transform: rotate(0);
+            transition: $duration;
+            background-color: $deep-blue;
+            &:nth-child(1) {
+                top: 9px;
+            }
+            &:nth-child(2),
+            &:nth-child(3) {
+                top: 17px;
+            }
+            &:nth-child(4) {
+                top: 25px;
+            }
+        }
+    }
+
+
+}
+
+.mobile-menu-open {
+    .header {
+        .menu {
+            @include tablet {
+                opacity: 1;
+                pointer-events: auto;
+                top: calc(100vh - 150px);
+            }
+        }
+    }
+    .burger-btn {
+        span {
+            &:nth-child(1) {
+                top: 17px;
+                width: 0%;
+                left: 50%;
+            }
+            &:nth-child(2) {
+                transform: rotate(45deg);
+                width: 24px;
+                left: 6px;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg);
+                width: 24px;
+                left: 6px;
+            }
+            &:nth-child(4) {
+                top: 17px;
+                width: 0%;
+                left: 50%;
+            }
+        }
+    }
+}

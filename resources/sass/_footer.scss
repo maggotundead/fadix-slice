@@ -1,0 +1,40 @@
+.footer {
+    .inner {
+        border-top: 2px solid $deep-blue;
+        padding-top: 24px;
+        padding-bottom: 40px;
+        display: flex;
+        align-items: center;
+        @include mobile {
+            padding-top: 32px;
+            padding-bottom: 32px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    address {
+        font-style: normal;
+        margin-right: auto;
+        @include mobile {
+            margin-top: 24px;
+            order: 2;
+            width: 100%;
+            text-align: center;
+        }
+    }
+    a {
+        &:not(:last-of-type) {
+            margin-right: 32px;
+        }
+    }
+    .copyright {
+        margin-left: 32px;
+        @include mobile {
+            margin-top: 24px;
+            margin-left: 0;
+            order: 3;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}
