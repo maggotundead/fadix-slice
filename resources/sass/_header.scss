@@ -1,13 +1,15 @@
 .header {
-    // position: fixed;
-    position: absolute;
+    position: fixed;
+    // position: absolute;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     transition: $duration;
+    backdrop-filter: blur(12px);
     .container {
-        padding-top: 48px;
+        padding-top: 36px;
+        padding-bottom: 36px;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -81,8 +83,7 @@
         position: relative;
         order: 99;
         margin-left: auto;
-        border-radius: 3px;
-        background-color: #F5F7FF;
+        background-color: transparent;
         flex-shrink: 0;
         @include tablet {
             display: block;
@@ -96,7 +97,7 @@
             opacity: 1;
             transform: rotate(0);
             transition: $duration;
-            background-color: $deep-blue;
+            background-color: $grey-500;
             &:nth-child(1) {
                 top: 9px;
             }

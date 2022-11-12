@@ -1,5 +1,5 @@
-const teamSwiper = new Swiper('.js-team-swiper', {
-    slidesPerView: 'auto',
+const servicesSwiper = new Swiper('.js-services-swiper', {
+    slidesPerView: 1,
     loop: false,
     draggable: true,
     // spaceBetween: 30,
@@ -16,48 +16,61 @@ const teamSwiper = new Swiper('.js-team-swiper', {
         enabled: true,
         onlyInViewport: true
     },
-    // pagination: {
-    //     el: '#team-pagination',
-    //     type: 'bullets',
-    //     clickable: true,
-    // },
-    // navigation: {
-    //     prevEl: '#team-prev',
-    //     nextEl: '#team-next',
-    // },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+
     breakpoints: {
         0: {
-            // slidesPerView: 1,
-            spaceBetween: 0,
+            slidesPerView: 1
         },
-        768: {
-            // slidesPerView: 2,
-            spaceBetween: 30,
+        1199: {
+            slidesPerView: 'auto',
         },
-        // 860: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 64,
-        // },
-        // 1024: {
-        //     spaceBetween: 75,
-        // }
     }
 });
+
+const feedbackSwiper = new Swiper('.js-feedback-swiper', {
+    slidesPerView: 1,
+    loop: false,
+    draggable: true,
+    // spaceBetween: 30,
+    // noSwiping: true,
+    // autoplay: {
+    //     disableOnInteraction: true,
+    //     pauseOnMouseEnter: true,
+    // },
+    mousewheel: {
+        forceToAxis: true,
+    },
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
+    navigation: {
+        prevEl: '#prev-feedback',
+        nextEl: '#next-feedback',
+    },
+});
+
 
 document.querySelector('.burger-btn').addEventListener('click', () => {
     document.querySelector('body').classList.toggle('mobile-menu-open');
 });
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.body.classList.contains('mobile-menu-open') && document.body.classList.remove('mobile-menu-open');
+// document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+//     anchor.addEventListener('click', function (e) {
+//         e.preventDefault();
+//         document.body.classList.contains('mobile-menu-open') && document.body.classList.remove('mobile-menu-open');
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+//         document.querySelector(this.getAttribute('href')).scrollIntoView({
+//             behavior: 'smooth'
+//         });
+//     });
+// });
 
 // sticky header
 // window.onscroll = function() {toggleHeader()};

@@ -1,19 +1,30 @@
-$main-font: 'Gotham Pro';
+$main-font: 'Nunito Sans';
+$title-font: 'Ubuntu';
 
-$container-padding-x: 10px;
-$container-max-width: 1440px;
+$container-padding-x: 15px;
+$container-max-width: 1170px;
 
 $mobile-max-width: 767px;
-$tablet-max-width: 1023px;
+$tablet-max-width: 1199px;
+
+$block-padding-y-desktop: 80px;
+$block-padding-y-tablet: 60px;
+$block-padding-y-mobile: 60px;
 
 $duration: 0.3s;
 
-$deep-blue: #262834;
-$semi-deep-purple: #535868;
-$red: #F88181;
+$blue: #3484F7;
+$blue-light: #91D8F9;
+$grey-200: #B2B5C7;
+$grey-300: #9697B0;
+$grey-400: #4A4656;
+$grey-500: #090B12;
 
 $body-bg: #fff;
-$text-color: $deep-blue;
-$error-color: $red;
+
+$text-color: $grey-300;
+$theme-color: $blue;
+$theme-color-light: $blue-light;
+$title-color: $grey-500;
 
 
