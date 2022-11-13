@@ -144,6 +144,10 @@ section {
         padding-top: $block-padding-y-mobile;
         padding-bottom: $block-padding-y-mobile;
     }
+
+    &.bluelight-bg {
+        background: rgba(145, 216, 249, 0.24);
+    }
 }
 
 .container {
@@ -154,4 +158,5 @@ section {
     position: relative;
     padding: 0 $container-padding-x;
 }
+
 

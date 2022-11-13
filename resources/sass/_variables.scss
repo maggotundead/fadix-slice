@@ -15,6 +15,8 @@ $duration: 0.3s;
 
 $blue: #3484F7;
 $blue-light: #91D8F9;
+
+$grey-100: #F3F3F7;
 $grey-200: #B2B5C7;
 $grey-300: #9697B0;
 $grey-400: #4A4656;
@@ -22,9 +24,11 @@ $grey-500: #090B12;
 
 $body-bg: #fff;
 
+$black: $grey-500;
 $text-color: $grey-300;
 $theme-color: $blue;
 $theme-color-light: $blue-light;
-$title-color: $grey-500;
+$title-color: $black;
+$header-text-color: $grey-300;
 
 

@@ -1,0 +1,29 @@
+
+.responsive-visible {
+    @media screen and ( min-width: calc(#{$tablet-max-width} + 1px) ) {
+        display: none !important;
+    }
+    @media screen and ( max-width: $tablet-max-width ) {
+        display: block;
+    }
+}
+.tablet-visible {
+    @media screen and ( min-width: calc(#{$tablet-max-width} + 1px) ) {
+        display: none !important;
+    }
+    @media screen and ( min-width: calc(#{$mobile-max-width} + 1px) ) and ( max-width: $tablet-max-width ) {
+        display: block;
+    }
+    @media screen and ( max-width: $mobile-max-width ) {
+        display: none !important;
+    }
+}
+
+.mobile-visible {
+    @media screen and ( min-width: calc($mobile-max-width + 1px) ) {
+        display: none !important;
+    }
+    @media screen and ( max-width: $mobile-max-width ) {
+        display: block;
+    }
+}

@@ -26,7 +26,8 @@ const servicesSwiper = new Swiper('.js-services-swiper', {
         0: {
             slidesPerView: 1
         },
-        1199: {
+        //$tablet-width
+        1200: {
             slidesPerView: 'auto',
         },
     }
@@ -56,9 +57,54 @@ const feedbackSwiper = new Swiper('.js-feedback-swiper', {
     },
 });
 
+const cooperationOptsSwiper = new Swiper('.js-cooperation-options-swiper', {
+    slidesPerView: 'auto',
+    loop: false,
+    draggable: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
+const texhOptsSwiper = new Swiper('.js-tech-swiper', {
+    slidesPerView: 'auto',
+    loop: false,
+    draggable: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
 
 document.querySelector('.burger-btn').addEventListener('click', () => {
     document.querySelector('body').classList.toggle('mobile-menu-open');
+});
+
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach( item => {
+    item.addEventListener('click', () => {
+        item.classList.toggle('active');
+    });
 });
 
 // document.querySelectorAll('a[href^="#"]').forEach(anchor => {

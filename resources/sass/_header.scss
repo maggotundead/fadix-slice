@@ -7,71 +7,47 @@
     z-index: 10;
     transition: $duration;
     backdrop-filter: blur(12px);
+    border-bottom: 1px solid #fff;
+
+    // temp
+    @include tablet {
+        display: none;
+    }
     .container {
-        padding-top: 36px;
-        padding-bottom: 36px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        @include tablet {
-            padding-top: 24px;
-        }
-        @include mobile {
-            padding-top: 10px;
-        }
+        padding-top: 36px;
+        padding-bottom: 36px;
     }
     .logo {
         position: relative;
         z-index: 2;
     }
+
     .menu {
-        @include tablet {
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 100vh;
-            height: 150px;
-            opacity: 0;
-            pointer-events: none;
-            transition: $duration;
-            border-top: 1px solid #B2B1D2;
-            border-radius: 16px 16px 0px 0px;
-            background-color: #fff;
-            padding: 24px 16px;
-        }
         ul {
             display: flex;
-            align-items: center;
             list-style: none;
-            @include tablet {
-                justify-content: space-evenly;
-                flex-wrap: wrap;
-            }
-            @include mobile {
-                justify-content: space-between;
-            }
+            gap: 30px;
+            font-size: 16px;
+            font-weight: 700;
+            color: $header-text-color;
+            transition: $duration;
         }
-        li {
-            &:not(:last-child) {
-                margin-right: 48px;
-                @include tablet {
-                    margin-right: 0;
-                }
-            }
-            &:last-child {
-                @include mobile {
-                    width: 100%;
-                    margin-top: 32px;
-                }
+        a {
+            &:hover {
+                color: $theme-color;
             }
         }
     }
 
-    .btn {
-        margin-left: 32px;
-        @include tablet {
-            margin-left: 0;
-            width: 100%;
+    .lang {
+        display: flex;
+        align-items: center;
+        color: $header-text-color;
+        svg {
+            margin-right: 7px;
         }
     }
 
