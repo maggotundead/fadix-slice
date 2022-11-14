@@ -35,6 +35,11 @@
         @content;
     }
 }
+@mixin desktop {
+    @media screen and ( min-width: calc(#{$tablet-max-width} + 1px) ) {
+        @content;
+    }
+}
 @mixin tablet {
     @media screen and (max-width: $tablet-max-width) {
         @content;

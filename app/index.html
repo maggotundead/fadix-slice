@@ -91,7 +91,7 @@
 				<section class="block-homescreen">
 					<div class="container">
 						<div class="text">
-							<h1 class="block-title big">
+							<h1 class="block-title home-title">
 								Looking for top-notch <span>IT specialists?</span>
 							</h1>
 							<p>
@@ -110,7 +110,13 @@
 							</button>
 						</div>
 						<div class="figure">
-							<img src="img/homescreen-figure.png" alt="">
+							<picture>
+								<source media="(max-width: 767px)" srcset="img/homescreen-figure-mobile.png" />
+								<source media="(min-width: 768px)" srcset="img/homescreen-figure-tablet.png" />
+								<source media="(min-width: 1200px)" srcset="img/homescreen-figure-desktop.png" />
+								<img src="img/homescreen-figure-desktop.png" alt="">
+							</picture>
+
 						</div>
 					</div>
 				</section>
@@ -1413,7 +1419,7 @@
 							<svg width="211" height="53"><use xlink:href="#logo"></use></svg>
 						</div>
 						<div class="copyright">
-							Created by &nbsp;<a href="/" rel="noindex nofollow noreferrer">Stas Lavrik Design</a>&nbsp; @Coopyright 2022
+							Created by &nbsp;<a href="/" rel="noindex nofollow noreferrer">Stas Lavrik Design</a>&nbsp; @Copyright 2022
 						</div>
 						<div class="socials">
 							<a href="/" rel="noindex nofollow noreferrer">

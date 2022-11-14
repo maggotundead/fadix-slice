@@ -88,7 +88,12 @@
     // }
     &.big {
         font-size: 56px;
-        letter-spacing: 0.05em;
+        letter-spacing: .05em;
+        @include mobile {
+            line-height: 1.2;
+            letter-spacing: .02em;
+            font-size: 48px;
+        }
     }
     &.centered {
         text-align: center;

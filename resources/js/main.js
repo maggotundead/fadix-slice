@@ -1,5 +1,5 @@
 const servicesSwiper = new Swiper('.js-services-swiper', {
-    slidesPerView: 1,
+    slidesPerView: 'auto',
     loop: false,
     draggable: true,
     // spaceBetween: 30,
@@ -22,15 +22,15 @@ const servicesSwiper = new Swiper('.js-services-swiper', {
         clickable: true,
     },
 
-    breakpoints: {
-        0: {
-            slidesPerView: 1
-        },
-        //$tablet-width
-        1200: {
-            slidesPerView: 'auto',
-        },
-    }
+    // breakpoints: {
+    //     0: {
+    //         slidesPerView: 1
+    //     },
+    //     //$tablet-width
+    //     1200: {
+    //         slidesPerView: 'auto',
+    //     },
+    // }
 });
 
 const teamsSwiper = new Swiper('.js-teams-swiper', {
@@ -50,6 +50,15 @@ const teamsSwiper = new Swiper('.js-teams-swiper', {
         type: 'bullets',
         clickable: true,
     },
+    breakpoints: {
+        320: {
+            loop: true,
+        },
+        //$tablet-width
+        1200: {
+            loop: false,
+        },
+    }
 });
 
 const feedbackSwiper = new Swiper('.js-feedback-swiper', {

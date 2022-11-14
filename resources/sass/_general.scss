@@ -161,7 +161,7 @@ section {
         padding: 0 $container-padding-x-tablet;
     }
     @include mobile {
-        padding: $container-padding-x-mobile;
+        padding: 0 $container-padding-x-mobile;
     }
 }
 

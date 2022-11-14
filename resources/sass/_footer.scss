@@ -1,6 +1,14 @@
 .footer {
     padding-top: 100px;
     padding-bottom: 100px;
+    @include tablet {
+        padding-top: $block-padding-y-tablet;
+        padding-bottom: $block-padding-y-tablet;
+    }
+    @include mobile {
+        padding-top: $block-padding-y-mobile;
+        padding-bottom: $block-padding-y-mobile;
+    }
     .inner {
         border-top: 1px solid rgba($black, .06);
         padding-top: 48px;
@@ -8,11 +16,19 @@
         align-items: center;
         justify-content: space-between;
         width: 100%;
+        @include mobile {
+            padding-top: 32px;
+            flex-direction: column;
+            gap: 32px;
+        }
     }
     .copyright {
         font-size: 14px;
         line-height: 1.43;
         color: $black;
+        @include mobile {
+            order: 3;
+        }
         a {
             color: $theme-color;
             text-decoration: underline;
