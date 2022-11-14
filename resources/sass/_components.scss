@@ -62,6 +62,12 @@
 
     + .block-title {
         margin-top: 24px;
+        @include tablet {
+            margin-top: 16px;
+        }
+        @include mobile {
+
+        }
     }
 }
 

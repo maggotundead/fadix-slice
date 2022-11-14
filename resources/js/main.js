@@ -33,6 +33,25 @@ const servicesSwiper = new Swiper('.js-services-swiper', {
     }
 });
 
+const teamsSwiper = new Swiper('.js-teams-swiper', {
+    slidesPerView: 'auto',
+    loop: true,
+    draggable: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
 const feedbackSwiper = new Swiper('.js-feedback-swiper', {
     slidesPerView: 1,
     loop: false,
@@ -57,6 +76,25 @@ const feedbackSwiper = new Swiper('.js-feedback-swiper', {
     },
 });
 
+const stepsSwiper = new Swiper('.js-steps-swiper', {
+    slidesPerView: 'auto',
+    loop: false,
+    draggable: true,
+    mousewheel: {
+        forceToAxis: true,
+    },
+    slideToClickedSlide: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: true
+    },
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'bullets',
+        clickable: true,
+    },
+});
+
 const cooperationOptsSwiper = new Swiper('.js-cooperation-options-swiper', {
     slidesPerView: 'auto',
     loop: false,
@@ -76,7 +114,7 @@ const cooperationOptsSwiper = new Swiper('.js-cooperation-options-swiper', {
     },
 });
 
-const texhOptsSwiper = new Swiper('.js-tech-swiper', {
+const techSwiper = new Swiper('.js-tech-swiper', {
     slidesPerView: 'auto',
     loop: false,
     draggable: true,

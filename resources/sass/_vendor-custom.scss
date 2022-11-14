@@ -1,4 +1,9 @@
 .swiper {
+    // &-wrapper {
+    //     @media screen and (min-width: calc(#{$tablet-max-width} + 1px)) {
+    //         transform: initial !important;
+    //     }
+    // }
     &-pagination {
         margin-top: 30px;
         position: relative;

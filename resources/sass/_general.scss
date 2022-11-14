@@ -157,6 +157,12 @@ section {
     margin-right: auto;
     position: relative;
     padding: 0 $container-padding-x;
+    @include tablet {
+        padding: 0 $container-padding-x-tablet;
+    }
+    @include mobile {
+        padding: $container-padding-x-mobile;
+    }
 }
 
 
