@@ -36,7 +36,7 @@
 						<span>EN</span>
 					</a>
 
-					<button class="btn white tablet-visible js-btn-order-stuff">
+					<button class="btn white tablet-visible js-contact-modal-btn js-btn-order-stuff">
 						<span>
 							Order stuff
 						</span>
@@ -61,7 +61,7 @@
 							</ul>
 						</nav>
 
-						<button class="btn white js-btn-order-stuff">
+						<button class="btn white js-contact-modal-btn js-btn-order-stuff">
 							<span>
 								Order stuff
 							</span>
@@ -103,11 +103,11 @@
 							<p>
 								Whether you need a website or a mobile app to be developed from scratch or you are looking for reinforcement for your ongoing IT project, Slice is the way to go!
 							</p>
-							<button class="btn figured js-arrange-call">
+							<a href="/" rel="noindex nofollow noopener" target="_blank" class="btn figured js-arrange-call">
 								<span>
 									Arrange a call
 								</span>
-							</button>
+							</a>
 						</div>
 						<div class="figure">
 							<picture>
@@ -491,7 +491,7 @@
 								<div class="cta-descr">
 									Let’s find out how our outstaffing options <br> can benefit your business!
 								</div>
-								<button class="btn js-cta-hire"><span>Hire Stuff</span></button>
+								<button class="btn js-contact-modal-btn js-cta-hire"><span>Hire Stuff</span></button>
 							</div>
 							<figure class="cta-figure">
 								<img src="img/cta-figure-1.png" alt="">
@@ -1400,7 +1400,7 @@
 								<div class="cta-descr">
 									Let’s find out how our outstaffing options <br> can benefit your business!
 								</div>
-								<button class="btn js-cta-hire"><span>Hire Stuff</span></button>
+								<button class="btn js-contact-modal-btn js-cta-hire"><span>Hire Stuff</span></button>
 							</div>
 							<figure class="cta-figure">
 								<img src="img/cta-figure-2.png" alt="">
@@ -1428,13 +1428,105 @@
 							<a href="/" rel="noindex nofollow noreferrer">
 								<svg width="20" height="20"><use xlink:href="#icon-facebook"></use></svg>
 							</a>
-							<a href="/" rel="noindex nofollow noreferrer">
+							<!-- <a href="/" rel="noindex nofollow noreferrer">
 								<svg width="20" height="20"><use xlink:href="#icon-git-fork"></use></svg>
+							</a> -->
+							<a href="/" rel="noindex nofollow noreferrer">
+								<svg width="20" height="20"><use xlink:href="#icon-mail"></use></svg>
 							</a>
 						</div>
 					</div>
 				</div>
+
+				<!-- temp -->
+				<div class="modal-btns" style="display: flex; flex-wrap: wrap; gap: 16px; padding: 16px; margin-top: 40px;">
+					<button class="btn js-contact-modal-btn">
+						<span>
+							contact modal
+						</span>
+					</button>
+					<button class="btn js-thanks-modal-btn">
+						<span>
+							thanks modal
+						</span>
+					</button>
+					<button class="btn js-error-modal-btn">
+						<span>
+							error modal
+						</span>
+					</button>
+				</div>
+				<!-- temp -->
 			</footer>
+
+			<div class="modal" id="contact-modal">
+				<div class="modal-overlay"></div>
+				<div class="modal-body">
+					<div class="modal-content">
+						<button class="modal-close">
+                            <svg width="14" height="14"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+						<div class="title-annotation">IT Outstaffing Services</div>
+						<h3 class="block-title modal-title">Contact Us</h3>
+                        <div class="modal-descr">Please fill in the form below to get the best IT outstaffing services and guidances for your business.</div>
+						<form action="/" class="modal-form">
+							<div class="input-wrapper">
+								<input type="email" placeholder="Enter your email" required class="input">
+							</div>
+							<div class="input-wrapper">
+								<textarea name="" placeholder="Tell how our team can hellp you" class="textarea"></textarea>
+							</div>
+							<button class="btn figured modal-submit js-contact-submit">
+								<span>
+									Send now
+								</span>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="thanks-modal">
+				<div class="modal-overlay"></div>
+				<div class="modal-body">
+					<div class="modal-content">
+						<button class="modal-close">
+                            <svg width="14" height="14"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+						<div class="title-annotation">Elefante</div>
+						<h3 class="block-title modal-title">Thank you</h3>
+                        <div class="modal-descr">Thank you for contacting IT Outstaffing Services. Our consultants will reach out to you shortly!</div>
+						<div class="modal-image">
+							<img src="img/modal-success.png" alt="">
+						</div>
+						<button class="btn white modal-submit js-submit-close">
+							<span>
+								Close
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="error-modal">
+				<div class="modal-overlay"></div>
+				<div class="modal-body">
+					<div class="modal-content">
+						<button class="modal-close">
+                            <svg width="14" height="14"><use xlink:href="#icon-close"></use></svg>
+                        </button>
+						<div class="title-annotation">Error annotation</div>
+						<h3 class="block-title modal-title">Error title</h3>
+                        <div class="modal-descr">some error description</div>
+						<div class="modal-image">
+							<img src="img/modal-error.png" alt="">
+						</div>
+						<button class="btn white modal-submit js-submit-close">
+							<span>
+								Close
+							</span>
+						</button>
+					</div>
+				</div>
+			</div>
 
 			<div class="sprite" style="display: none;">
 				<svg xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -1452,6 +1544,7 @@
 						<path d="M127 17.62V23.7H124V17.88C124 16.88 123.53 16.26 122.58 16.26C121.63 16.26 121.03 16.95 121.03 18.12V23.7H118.03V17.88C118.03 16.88 117.56 16.26 116.61 16.26C115.66 16.26 115.06 16.95 115.06 18.12V23.7H112.06V13.8H115.06V14.71C115.371 14.308 115.776 13.9896 116.241 13.7836C116.705 13.5776 117.214 13.4904 117.72 13.53C118.227 13.5035 118.733 13.6095 119.187 13.8374C119.641 14.0653 120.028 14.4074 120.31 14.83C120.64 14.3884 121.076 14.0376 121.578 13.8103C122.079 13.5829 122.631 13.4865 123.18 13.53C125.52 13.53 127 15.15 127 17.62Z" fill="#3484F7"/>
 						<path d="M129.52 13.74C130.735 13.74 131.72 12.755 131.72 11.54C131.72 10.325 130.735 9.34 129.52 9.34C128.305 9.34 127.32 10.325 127.32 11.54C127.32 12.755 128.305 13.74 129.52 13.74Z" fill="#3484F7"/>
 					</symbol>
+
 					<symbol viewBox="0 0 24 24" id="icon-globe" fill="none">
 						<path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M2 12H22" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1468,12 +1561,21 @@
 						<path d="M14.9999 1.66699H12.4999C11.3948 1.66699 10.335 2.10598 9.55364 2.88738C8.77224 3.66878 8.33325 4.72859 8.33325 5.83366V8.33366H5.83325V11.667H8.33325V18.3337H11.6666V11.667H14.1666L14.9999 8.33366H11.6666V5.83366C11.6666 5.61265 11.7544 5.40068 11.9107 5.2444C12.0669 5.08812 12.2789 5.00033 12.4999 5.00033H14.9999V1.66699Z" fill="currentColor"/>
 					</symbol>
 
-					<svg viewBox="0 0 20 20" id="icon-git-fork" fill="none">
+					<symbol viewBox="0 0 20 20" id="icon-git-fork" fill="none">
 						<path d="M5 2.5V12.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M15 7.5C16.3807 7.5 17.5 6.38071 17.5 5C17.5 3.61929 16.3807 2.5 15 2.5C13.6193 2.5 12.5 3.61929 12.5 5C12.5 6.38071 13.6193 7.5 15 7.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M5 17.5C6.38071 17.5 7.5 16.3807 7.5 15C7.5 13.6193 6.38071 12.5 5 12.5C3.61929 12.5 2.5 13.6193 2.5 15C2.5 16.3807 3.61929 17.5 5 17.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 						<path d="M15 7.5C15 9.48912 14.2098 11.3968 12.8033 12.8033C11.3968 14.2098 9.48912 15 7.5 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg>
+					</symbol>
+
+					<symbol viewBox="0 0 20 20" id="icon-mail" fill="none">
+						<path d="M3.33341 3.33301H16.6667C17.5834 3.33301 18.3334 4.08301 18.3334 4.99967V14.9997C18.3334 15.9163 17.5834 16.6663 16.6667 16.6663H3.33341C2.41675 16.6663 1.66675 15.9163 1.66675 14.9997V4.99967C1.66675 4.08301 2.41675 3.33301 3.33341 3.33301Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M18.3334 5L10.0001 10.8333L1.66675 5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</symbol>
+
+					<symbol viewBox="0 0 14 14" id="icon-close">
+						<path d="M7.00072 5.58599L11.9507 0.635986L13.3647 2.04999L8.41472 6.99999L13.3647 11.95L11.9507 13.364L7.00072 8.41399L2.05072 13.364L0.636719 11.95L5.58672 6.99999L0.636719 2.04999L2.05072 0.635986L7.00072 5.58599Z" fill="currentColor"/>
+					</symbol>
 
 				</svg>
 			</div>

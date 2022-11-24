@@ -3993,7 +3993,8 @@ section {
     color: #fff;
     display: flex;
     border-radius: 12px;
-    z-index: 2; }
+    z-index: 2;
+    width: 100%; }
 
 .title-annotation {
   font-size: 16px;
@@ -5134,6 +5135,111 @@ section {
       border: 1.5px solid rgba(9, 11, 18, 0.1);
       color: #090B12;
       border-radius: 50%; }
+
+.modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100; }
+  .modal.active {
+    opacity: 1;
+    pointer-events: auto; }
+  .modal-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(2px); }
+  .modal-body {
+    padding: 60px 100px;
+    background-color: #fff;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 570px;
+    min-height: 660px;
+    position: relative;
+    z-index: 2;
+    display: flex; }
+    @media screen and (max-width: 1199px) {
+      .modal-body {
+        padding: 60px 90px; } }
+    @media screen and (max-width: 767px) {
+      .modal-body {
+        margin-top: auto;
+        width: 100%;
+        min-height: 540px;
+        border-radius: 16px 16px 0 0;
+        padding: 32px 16px 24px; } }
+  .modal-close {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    color: #9697B0; }
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%; }
+  .modal-descr {
+    margin-top: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #9697B0; }
+  .modal-form {
+    margin-top: 32px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1; }
+  .modal .input-wrapper {
+    width: 100%; }
+    .modal .input-wrapper:not(:last-child) {
+      margin-bottom: 24px; }
+  .modal .input,
+  .modal .textarea {
+    padding-left: 16px;
+    padding-right: 16px;
+    font-size: 16px;
+    color: #9697B0;
+    border: 1px solid #F3F3F7;
+    border-radius: 8px;
+    display: block;
+    width: 100%; }
+  .modal .input {
+    height: 56px; }
+  .modal .textarea {
+    padding-top: 16px;
+    resize: none;
+    height: 104px; }
+  .modal-image {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto 0; }
+    .modal-image img {
+      width: auto;
+      max-width: 100%; }
+  .modal-submit {
+    margin-top: auto; }
+    .modal-submit.white {
+      width: 100%; }
+    @media screen and (max-width: 1199px) {
+      .modal-submit {
+        width: 100%; } }
 
 .swiper-pagination {
   margin-top: 30px;

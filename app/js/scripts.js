@@ -188,28 +188,48 @@ faqItems.forEach( item => {
 // }
 
 
-//modal
-// const contactModal = document.querySelector('.contact-modal');
-// document.querySelectorAll('[modal-btn]').forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         contactModal.classList.add('open');
-//     });
-// });
+// modal
+const contactModal = document.getElementById('contact-modal');
+const thanksModal = document.getElementById('thanks-modal');
+const errorModal = document.getElementById('error-modal');
 
-// document.querySelectorAll('.modal-close').forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         document.querySelectorAll('.modal').forEach(modal => {
-//             modal.classList.remove('open');
-//         });
-//     });
-// });
-// document.querySelectorAll('.modal-overlay').forEach(btn => {
-//     btn.addEventListener('click', () => {
-//         document.querySelectorAll('.modal').forEach(modal => {
-//             modal.classList.remove('open');
-//         });
-//     });
-// });
+document.querySelectorAll('.js-contact-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        contactModal.classList.add('active');
+    });
+});
+document.querySelectorAll('.js-thanks-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        thanksModal.classList.add('active');
+    });
+});
+document.querySelectorAll('.js-error-modal-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        errorModal.classList.add('active');
+    });
+});
+
+document.querySelectorAll('.modal-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.classList.remove('active');
+        });
+    });
+});
+document.querySelectorAll('.js-submit-close').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.classList.remove('active');
+        });
+    });
+});
+document.querySelectorAll('.modal-overlay').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.modal').forEach(modal => {
+            modal.classList.remove('active');
+        });
+    });
+});
 
 // const cart = document.querySelector('.cart');
 // document.querySelector('.cart-btn').addEventListener('click', () => {
