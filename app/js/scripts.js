@@ -49,12 +49,12 @@ const servicesSwiper = new Swiper('.js-services-swiper', {
 
 const teamsSwiper = new Swiper('.js-teams-swiper', {
     slidesPerView: 'auto',
-    loop: true,
+    loop: false,
     draggable: true,
     mousewheel: {
         forceToAxis: true,
     },
-    slideToClickedSlide: true,
+    // slideToClickedSlide: true,
     keyboard: {
         enabled: true,
         onlyInViewport: true
@@ -64,15 +64,7 @@ const teamsSwiper = new Swiper('.js-teams-swiper', {
         type: 'bullets',
         clickable: true,
     },
-    breakpoints: {
-        320: {
-            loop: true,
-        },
-        //$tablet-width
-        1200: {
-            loop: false,
-        },
-    }
+
 });
 
 const feedbackSwiper = new Swiper('.js-feedback-swiper', {
@@ -231,6 +223,17 @@ document.querySelectorAll('.modal-overlay').forEach(btn => {
     });
 });
 
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+
+        document.body.classList.contains('mobile-menu-open') && document.body.classList.remove('mobile-menu-open');
+    });
+});
 // const cart = document.querySelector('.cart');
 // document.querySelector('.cart-btn').addEventListener('click', () => {
 //     cart.classList.toggle('open');
