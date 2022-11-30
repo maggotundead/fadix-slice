@@ -144,6 +144,11 @@ section {
         padding-top: $block-padding-y-mobile;
         padding-bottom: $block-padding-y-mobile;
     }
+    &:last-child {
+        @include mobile {
+            padding-bottom: 24px;
+        }
+    }
 
     &.bluelight-bg {
         background: rgba(145, 216, 249, 0.24);

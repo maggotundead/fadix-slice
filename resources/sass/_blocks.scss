@@ -18,7 +18,7 @@
         position: relative;
         z-index: 2;
         @include tablet {
-            width: 52%;
+            width: 56%;
         }
         @include mobile {
             width: 100%;
@@ -36,6 +36,11 @@
             font-size: 24px;
             line-height: 1.5;
             margin-bottom: 24px;
+        }
+        span {
+            @include mobile {
+                display: block;
+            }
         }
     }
     p {
@@ -68,6 +73,7 @@
         @include tablet {
             width: calc(50vw - #{$container-padding-x-tablet});
             right: $container-padding-x-tablet;
+            bottom: -40px;
         }
         @include mobile {
             width: 100vw;

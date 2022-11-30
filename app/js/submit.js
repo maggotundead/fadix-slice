@@ -43,9 +43,12 @@ contactForm.querySelector('form').onsubmit = async (e) => {
             body: new FormData(contactForm.querySelector('form'))
         });
         if (response.ok) {
-            resetForm(contactForm.querySelector('form'));
             contactForm.removeClass('active');
+            resetForm(contactForm.querySelector('form'));
             document.querySelector('#thanks-modal').classList.add('active');
+            setTimeout(() => {
+                document.querySelector('#thanks-modal').classList.remove('active');
+            }, 5000)
         } else {
             alert("Error, please try again")
         }

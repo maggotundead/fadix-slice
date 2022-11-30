@@ -213,9 +213,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+        let block = document.querySelector(this.getAttribute('href'));
+        let headerOffset = document.querySelector('header').offsetHeight;
+        let blockPosition = block.getBoundingClientRect().top;
+        let offsetPosition = blockPosition + window.pageYOffset - headerOffset / 2;
+
+        // block.scrollIntoView({
+        //     // behavior: 'smooth'
+        // });
+
+        window.scrollTo(0, offsetPosition);
 
         document.body.classList.contains('mobile-menu-open') && document.body.classList.remove('mobile-menu-open');
     });
