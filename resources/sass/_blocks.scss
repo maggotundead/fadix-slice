@@ -1,12 +1,15 @@
 .block-homescreen {
     padding-top: 200px;
-    padding-bottom: 115px;
+    // padding-bottom: 115px;
+    padding-bottom: $block-padding-y-desktop;
     @include tablet {
         padding-top: 166px;
+        padding-bottom: $block-padding-y-tablet;
     }
     @include mobile {
         padding-top: 90px;
-        padding-bottom: 60px;
+        // padding-bottom: 60px;
+        padding-bottom: $block-padding-y-mobile;
     }
     .container {
         display: flex;
@@ -66,24 +69,55 @@
     }
     .figure {
         position: absolute;
-        right: -82px;
+        // right: -82px;
+        right: 0;
         bottom: 0;
         width: 60%;
-        max-width: 690px;
+        // max-width: 690px;
+        height: 400px;
+        max-width: 470px;
+        border-radius: 128px 128px 0px 128px;
+        background-color: $grey-100;
         @include tablet {
             width: calc(50vw - #{$container-padding-x-tablet});
+            max-width: 340px;
+            height: 250px;
             right: $container-padding-x-tablet;
-            bottom: -40px;
+            // bottom: -40px;
+            bottom: 0;
+            // background-color: $theme-color-light;
+            border-radius: 64px 64px 0px 64px;
         }
         @include mobile {
             width: 100vw;
+            max-width: 156px;
+            height: 218px;
             right: initial;
             left: calc(50% + 8px);
+            // right: $container-padding-x-mobile;
             bottom: initial;
             top: 90px;
+            border-radius: 32px 32px 0px 32px;
+
         }
         img {
-            width: 100%;
+            // width: 100%;
+            margin: -175px -50px -110px -170px;
+            // width: auto;
+            max-width: 670px;
+            @include tablet {
+                margin: auto;
+                width: 100%;
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            @include mobile {
+                width: 340px;
+                top: 30px;
+                left: 20px;
+                transform: none;
+            }
         }
     }
 }
@@ -261,10 +295,12 @@
         width: 100%;
         margin-top: 40px;
         border-radius: 128px 128px 0px 128px;
-        background-color: $theme-color-light;
+        // background-color: $theme-color-light;
+        background-color: $grey-100;
         position: relative;
         @include tablet {
             display: none;
+            // background-color: $theme-color-light;
         }
         @include mobile {
             margin-top: 60px;
@@ -368,14 +404,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                background: #FFFFFF;
+                // background: #FFFFFF;
                 box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
                 border-radius: 12px;
                 position: relative;
                 z-index: 2;
                 img, svg {
-                    max-width: 32px;
-                    max-height: 32px;
+                    // max-width: 32px;
+                    max-width: 56px;
+                    // max-height: 32px;
+                    max-height: 56px;
                     object-fit: contain;
                 }
             }
@@ -658,7 +696,8 @@
     }
     .cta-inner {
         padding: 48px 100px;
-        background-color: $theme-color-light;
+        // background-color: $theme-color-light;
+        background-color: $grey-100;
         border-radius: 64px 64px 0px 64px;
         display: flex;
         align-items: flex-end;
@@ -668,6 +707,7 @@
             padding: 354px 48px 48px;
             flex-direction: column;
             align-items: flex-start;
+            // background-color: $theme-color-light;
         }
         @include mobile {
             padding: 354px 24px 48px;

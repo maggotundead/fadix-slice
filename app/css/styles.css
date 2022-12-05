@@ -3794,6 +3794,7 @@ section {
   z-index: 100;
   transition: 0.3s;
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid #fff; }
   .header .container {
     display: flex;
@@ -4017,10 +4018,11 @@ section {
 
 .block-homescreen {
   padding-top: 200px;
-  padding-bottom: 115px; }
+  padding-bottom: 80px; }
   @media screen and (max-width: 1199px) {
     .block-homescreen {
-      padding-top: 166px; } }
+      padding-top: 166px;
+      padding-bottom: 70px; } }
   @media screen and (max-width: 767px) {
     .block-homescreen {
       padding-top: 90px;
@@ -4075,24 +4077,47 @@ section {
     margin-top: 48px; }
   .block-homescreen .figure {
     position: absolute;
-    right: -82px;
+    right: 0;
     bottom: 0;
     width: 60%;
-    max-width: 690px; }
+    height: 400px;
+    max-width: 470px;
+    border-radius: 128px 128px 0px 128px;
+    background-color: #F3F3F7; }
     @media screen and (max-width: 1199px) {
       .block-homescreen .figure {
         width: calc(50vw - 34px);
+        max-width: 340px;
+        height: 250px;
         right: 34px;
-        bottom: -40px; } }
+        bottom: 0;
+        border-radius: 64px 64px 0px 64px; } }
     @media screen and (max-width: 767px) {
       .block-homescreen .figure {
         width: 100vw;
+        max-width: 156px;
+        height: 218px;
         right: initial;
         left: calc(50% + 8px);
         bottom: initial;
-        top: 90px; } }
+        top: 90px;
+        border-radius: 32px 32px 0px 32px; } }
     .block-homescreen .figure img {
-      width: 100%; }
+      margin: -175px -50px -110px -170px;
+      max-width: 670px; }
+      @media screen and (max-width: 1199px) {
+        .block-homescreen .figure img {
+          margin: auto;
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%); } }
+      @media screen and (max-width: 767px) {
+        .block-homescreen .figure img {
+          width: 340px;
+          top: 30px;
+          left: 20px;
+          transform: none; } }
 
 .block-services .services-list {
   margin-top: 60px; }
@@ -4247,7 +4272,7 @@ section {
   width: 100%;
   margin-top: 40px;
   border-radius: 128px 128px 0px 128px;
-  background-color: #91D8F9;
+  background-color: #F3F3F7;
   position: relative; }
   @media screen and (max-width: 1199px) {
     .block-teams .figure {
@@ -4340,14 +4365,13 @@ section {
       display: flex;
       align-items: center;
       justify-content: center;
-      background: #FFFFFF;
       box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.05);
       border-radius: 12px;
       position: relative;
       z-index: 2; }
       .block-teams .team-item-icon .inner img, .block-teams .team-item-icon .inner svg {
-        max-width: 32px;
-        max-height: 32px;
+        max-width: 56px;
+        max-height: 56px;
         object-fit: contain; }
     .block-teams .team-item-icon::before {
       content: '';
@@ -4586,7 +4610,7 @@ section {
       padding-top: 112px; } }
   .block-cta .cta-inner {
     padding: 48px 100px;
-    background-color: #91D8F9;
+    background-color: #F3F3F7;
     border-radius: 64px 64px 0px 64px;
     display: flex;
     align-items: flex-end;
