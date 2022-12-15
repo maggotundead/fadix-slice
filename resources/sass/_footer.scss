@@ -61,6 +61,12 @@
             border: 1.5px solid rgba($black, .1);
             color: $black;
             border-radius: 50%;
+            transition: $duration;
+            &:hover {
+                background-color: $black;
+                color: #fff;
+                border-color: $black;
+            }
         }
     }
 }

@@ -79,6 +79,7 @@
     }
     .input-wrapper {
         width: 100%;
+        position: relative;
         &:not(:last-child) {
             margin-bottom: 24px;
         }
@@ -89,19 +90,72 @@
         padding-left: 16px;
         padding-right: 16px;
         font-size: 16px;
-        color: $grey-300;
         border: 1px solid $grey-100;
         border-radius: 8px;
         display: block;
         width: 100%;
+        color: $black;
+        transition: $duration;
+        &::placeholder {
+            color: $grey-300;
+            opacity: 1;
+        }
+        &:focus {
+            border-color: #3484F7;
+
+        }
+        &:not(:valid):not(:placeholder-shown) {
+            border-color: $red;
+        }
+        &:hover:placeholder-shown + .input-placeholder {
+            color: $black;
+        }
+
+        &.disabled,
+        &[disabled] {
+            background-color: $grey-100;
+            border-color: $grey-100;
+            color: $grey-300;
+        }
+    }
+
+    .input-placeholder {
+        position: absolute;
+        font-size: 16px;
+        top: 16px;
+        left: 16px;
+        // color: $black;
+        color: $grey-300;
+        transition: $duration;
+        pointer-events: none;
     }
     .input {
         height: 56px;
+        &:focus,
+        &:not(:placeholder-shown) {
+            padding-top: 16px;
+            + .input-placeholder {
+                top: 6px;
+                font-size: 12px;
+                line-height: 1.33;
+                color: $grey-300;
+            }
+        }
     }
     .textarea {
         padding-top: 16px;
         resize: none;
         height: 104px;
+        &:focus,
+        &:not(:placeholder-shown) {
+            padding-top: 24px;
+            + .input-placeholder {
+                top: 6px;
+                font-size: 12px;
+                line-height: 1.33;
+                color: $grey-300;
+            }
+        }
     }
 
     &-image {

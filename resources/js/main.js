@@ -237,3 +237,47 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 //         cart.classList.remove('open');
 //     }
 // });
+
+window.onscroll = () => toggleHeader();
+const header = document.querySelector('header');
+let sticky = header.offsetTop;
+
+const toggleHeader = () => {
+  if (window.pageYOffset > sticky) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+}
+
+(function () {
+    const parallaxElem = document.querySelectorAll('.figure img');
+    Array.prototype.forEach.call(parallaxElem, function (el) {
+
+      let bgPos = {
+        x: 1920,
+        y: 1080
+      };
+      const delta = -0.015;
+      let reactToTweenUpdate = () => {
+        let winW = window.innerWidth / 2;
+        let winH = window.innerHeight / 2;
+        el.style.top = `${50 - (bgPos.y - winH) * delta}%`;
+        el.style.left = `${50 - (bgPos.x - winW) * delta}%`;
+      };
+      let tween = new TweenMax(bgPos, 0.9, {
+        onUpdate: () => reactToTweenUpdate(),
+        ease: Power4.easeOut
+      });
+      const parentSestion = el.closest('section');
+      parentSestion.onmousemove = function (event) {
+        tween.updateTo(
+          {
+            x: event.clientX,
+            y: event.clientY
+          },
+          true
+        );
+      };
+    });
+})();

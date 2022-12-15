@@ -20,10 +20,8 @@ const  contactForm = document.querySelector('#contact-modal');
 //     $('.contact-success').addClass('hide');
 // })
 
-contactForm.querySelector('form').onsubmit = async (e) => {
+document.querySelector('#contact-modal form').onsubmit = async (e) => {
     e.preventDefault();
-
-    // let name = $('#contact-modal input[name="name"]');
     let email = $('#contact-modal input[name="email"]');
     let required = true;
     // if (!name.val()) {
@@ -40,10 +38,10 @@ contactForm.querySelector('form').onsubmit = async (e) => {
     if (required) {
         let response = await fetch('/contact-form.php', {
             method: 'POST',
-            body: new FormData(contactForm.querySelector('form'))
+            body: new FormData(document.querySelector('#contact-modal form'))
         });
         if (response.ok) {
-            contactForm.removeClass('active');
+            contactForm.classList.remove('active');
             resetForm(contactForm.querySelector('form'));
             document.querySelector('#thanks-modal').classList.add('active');
             setTimeout(() => {

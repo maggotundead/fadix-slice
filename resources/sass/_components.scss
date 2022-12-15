@@ -1,11 +1,17 @@
 .btn {
     display: inline-flex;
     position: relative;
+    transition: $duration;
     &.white {
         span {
             background-color: #fff;
             color: $theme-color;
             border: 1px solid $theme-color-light;
+        }
+        &:hover {
+            span {
+                color: #fff;
+            }
         }
     }
 
@@ -20,6 +26,7 @@
             border-radius: 12px;
             top: -10px;
             left: 10px;
+            transition: $duration;
         }
     }
 
@@ -28,6 +35,22 @@
             padding-left: 32px;
             padding-right: 32px;
             height: 40px;
+        }
+    }
+
+    &:hover {
+        &:before {
+            border-color: $theme-color;
+        }
+        span {
+            background-color: $blue-darker;
+        }
+    }
+    &[disabled],
+    &.disabled {
+        span {
+            color: $grey-200;
+            background-color: $grey-300;
         }
     }
 
@@ -48,6 +71,7 @@
         border-radius: 12px;
         z-index: 2;
         width: 100%;
+        transition: $duration;
     }
 }
 

@@ -14,6 +14,20 @@
     //     backdrop-filter: initial;
     //     border: 0;
     // }
+    &.sticky {
+        .container {
+            padding-top: 24px;
+            padding-bottom: 24px;
+            @include tablet {
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            @include mobile {
+                padding-top: 16px;
+                padding-bottom: 16px;
+            }
+        }
+    }
 
     .container {
         display: flex;
@@ -21,6 +35,7 @@
         justify-content: space-between;
         padding-top: 36px;
         padding-bottom: 36px;
+        transition: $duration;
         @include tablet {
             padding-top: 24px;
             padding-bottom: 24px;
@@ -30,7 +45,13 @@
             padding-bottom: 16px;
         }
         > .btn {
-            margin-right: 42px;
+            // margin-right: 42px;
+            @include tablet {
+                margin-right: 42px;
+            }
+            @include mobile {
+                display: none;
+            }
         }
         > .lang,
         > .menu {
