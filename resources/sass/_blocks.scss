@@ -112,19 +112,23 @@
             // width: auto;
             max-width: 670px;
             margin: auto;
-            transform: translate(-50%, -50%);
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             @include tablet {
-                margin: auto;
                 width: 100%;
-                position: absolute;
+                top: 50% !important;
+                left: 50% !important;
+                // margin: auto;
+                // position: absolute;
                 // top: 50%;
                 // transform: translateY(-50%);
             }
             @include mobile {
                 width: 340px;
-                top: 30px;
-                left: 20px;
+                top: 30px !important;
+                left: 20px !important;
                 transform: none;
             }
         }
@@ -339,17 +343,24 @@
             width: 100%;
             max-width: 560px;
             margin: auto;
-            transform: translate(-50%, -50%);
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include tablet {
+                top: 50% !important;
+                left: 50% !important;
+            }
             @include mobile {
-                position: absolute;
+                // position: absolute;
                 width: 150%;
                 max-width: 512px;
                 margin: auto;
-                top: -50%;
-                bottom: -50%;
-                left: -50%;
+                top: -50% !important;
+                left: -50% !important;
                 right: -50%;
+                bottom: -50%;
+                transform: initial;
             }
         }
     }
@@ -599,6 +610,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        height: 100%;
         @include tablet {
             padding: 20px;
         }
@@ -623,6 +635,7 @@
                 padding: 0;
                 font-size: 18px;
                 line-height: 1.56;
+                flex-grow: 1;
             }
         }
         &-author {
@@ -663,6 +676,7 @@
     .swiper-slide {
         transition: $duration;
         opacity: 0;
+        height: auto;
         &-active {
             opacity: 1;
         }
@@ -805,8 +819,14 @@
             width: 100%;
             max-width: 560px;
             margin: auto;
-            transform: translate(-50%, -50%);
             position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include tablet {
+                top: 50% !important;
+                left: 50% !important;
+            }
         }
     }
 }
